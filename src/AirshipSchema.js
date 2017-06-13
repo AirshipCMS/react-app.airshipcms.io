@@ -11,7 +11,7 @@ class AirshipSchema extends Component {
     };
   }
   componentDidMount() {
-    fetch("/api/pages/__root__")
+    fetch("/api/pages/airship-schema")
       .then( res => res.json() )
       .then( page => {
         page.fields.map((field) =>{
@@ -26,9 +26,7 @@ class AirshipSchema extends Component {
   }
   render() {
     return (
-      <div className="AirshipSchema">
-        <h1>AirshipSchema</h1>
-      </div>
+      <div className="AirshipSchema body" dangerouslySetInnerHTML={{__html: this.state.page !== null ? this.state.page.body : "" }}></div>
     );
   }
 }

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './assets/airship-react.svg';
 import './App.css';
 
 class Setup extends Component {

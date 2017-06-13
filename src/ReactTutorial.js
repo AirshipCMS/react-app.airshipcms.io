@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './assets/airship-react.svg';
 import './App.css';
 
 class ReactTutorial extends Component {
@@ -11,7 +10,7 @@ class ReactTutorial extends Component {
     };
   }
   componentDidMount() {
-    fetch("/api/pages/__root__")
+    fetch("/api/pages/react-tutorial")
       .then( res => res.json() )
       .then( page => {
         page.fields.map((field) =>{
@@ -26,9 +25,7 @@ class ReactTutorial extends Component {
   }
   render() {
     return (
-      <div className="ReactTutorial">
-        <h1>ReactTutorial</h1>
-      </div>
+      <div className="ReactTutorial body" dangerouslySetInnerHTML={{__html: this.state.page !== null ? this.state.page.body : "" }}></div>
     );
   }
 }
