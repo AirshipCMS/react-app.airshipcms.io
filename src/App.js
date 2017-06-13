@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 import logo from './assets/airship-react.svg';
 import './App.css';
 
@@ -10,18 +11,31 @@ class App extends Component {
       page : null
     };
   }
-  componentDidMount() {
-    fetch("/api/pages/__root__")
-      .then( res => res.json() )
-      .then( page => { this.setState({page}) } );
-  }
+
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+        <nav className="nav">
+          <div className="container">
+            <Link className="nav-title title is-tab" to='/setup'>React + Airship CMS</Link>
+            <div className="nav-right nav-menu" id="nav-menu">
+              <Link className="nav-item" to='/setup'>Setup</Link>
+              <Link className="nav-item" to='/styling'>Styling</Link>
+              <Link className="nav-item active" to='/airship-schema'>Airship Schema</Link>
+              <Link className="nav-item" to='/react-tutorial'>React Tutorial</Link>
+              <Link className="nav-item" to='/elements'>Elements</Link>
+            </div>
+            <a className="nav-item is-tab github" href="https://github.com/AirshipCMS/angular-1.airshipcms.io"><img src="/assets/media/github-icon.svg"/></a>
+            <span className="nav-toggle" id="nav-toggle">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+        </nav>
+        <div className="container content">
+          { this.props.children }
         </div>
-        <h2>{ (this.state.page !== null) ? this.state.page.fields[0].value : "" }</h2>
       </div>
     );
   }
