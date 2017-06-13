@@ -24,7 +24,7 @@ class App extends Component {
               <Link className="nav-item" to='/react-tutorial'>React Tutorial</Link>
               <Link className="nav-item" to='/elements'>Elements</Link>
             </div>
-            <a className="nav-item is-tab github" href="https://github.com/AirshipCMS/angular-1.airshipcms.io"><img src="/assets/media/github-icon.svg"/></a>
+            <a className="nav-item is-tab github" href="https://github.com/AirshipCMS/react-app.airshipcms.io"><img src="/assets/media/github-icon.svg"/></a>
             <span className="nav-toggle" id="nav-toggle">
               <span></span>
               <span></span>
