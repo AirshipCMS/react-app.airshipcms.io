@@ -12,8 +12,8 @@ import { BrowserRouter, Route } from 'react-router-dom'
 
 ReactDOM.render(
   <BrowserRouter>
-  	<App path="/">
-  		<Route path="/setup" component={Setup}/>
+  	<App>
+  		<Route path="/" component={Setup}/>
   		<Route path="/styling" component={Styling}/>
   		<Route path="/airship-schema" component={AirshipSchema}/>
   		<Route path="/react-tutorial" component={ReactTutorial}/>

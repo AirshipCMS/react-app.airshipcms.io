@@ -16,9 +16,9 @@ class App extends Component {
       <div className="App">
         <nav className="nav">
           <div className="container">
-            <Link className="nav-title title is-tab" to='/setup'>React + Airship CMS</Link>
+            <Link className="nav-title title is-tab" to='/'>React + Airship CMS</Link>
             <div className="nav-right nav-menu" id="nav-menu">
-              <Link className="nav-item" to='/setup'>Setup</Link>
+              <Link className="nav-item" to='/'>Setup</Link>
               <Link className="nav-item" to='/styling'>Styling</Link>
               <Link className="nav-item active" to='/airship-schema'>Airship Schema</Link>
               <Link className="nav-item" to='/react-tutorial'>React Tutorial</Link>

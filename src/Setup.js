@@ -24,15 +24,18 @@ class Setup extends Component {
       });
   }
   render() {
+    const currentPath = window.location.pathname;
     return (
-      <div className="Setup">
-        <div className="summary">
-          <img src="/assets/media/react-airship.svg"/>
-          <h1 className="title is-4">{ (this.state.page !== null) ? this.state.page.name : "" }</h1>
-          <p>{ (this.state.page !== null) ? this.state.page.description : "" }</p>
+      (currentPath === '/') ?  (
+        <div className="Setup">
+          <div className="summary">
+            <img src="/assets/media/react-airship.svg"/>
+            <h1 className="title is-4">{ (this.state.page !== null) ? this.state.page.name : "" }</h1>
+            <p>{ (this.state.page !== null) ? this.state.page.description : "" }</p>
+          </div>
+          <div className="body" dangerouslySetInnerHTML={{__html: this.state.page !== null ? this.state.page.body : "" }}></div>
         </div>
-        <div className="body" dangerouslySetInnerHTML={{__html: this.state.page !== null ? this.state.page.body : "" }}></div>
-      </div>
+      ) : null
     );
   }
 }
