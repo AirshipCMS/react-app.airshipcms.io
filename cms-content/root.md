@@ -1,5 +1,5 @@
 # React + Airship CMS
-<img src="https://cdn.rawgit.com/AirshipCMS/react-app.airshipcms.io/86c6751d/assets/angular-airship-red.svg">
+<img src="https://cdn.rawgit.com/AirshipCMS/react-app.airshipcms.io/development/assets/react-airship-blue.svg">
 
 This is a demo of an Airship CMS project that uses an React to render all pages.
 You can view the demo at [http://react-app.airshipcms.io](http://react-app.airshipcms.io/).
