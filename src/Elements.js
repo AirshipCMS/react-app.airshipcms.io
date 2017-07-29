@@ -16,11 +16,7 @@ class Elements extends Component {
       .then( elements => {
       	elements.map((element) => {
         	return element.fields.map((field) =>{
-        	  switch(field.variable_name) {
-        	    default:
-        	      element[field.variable_name] = field.value;
-        	      break;
-        	  }
+        	  return element[field.variable_name] = field.value;
         	});
         });
         this.setState({ elements });

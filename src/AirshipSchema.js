@@ -15,11 +15,7 @@ class AirshipSchema extends Component {
       .then( res => res.json() )
       .then( page => {
         page.fields.map((field) =>{
-          switch(field.variable_name) {
-            default:
-              page[field.variable_name] = field.value;
-              break;
-          }
+          return page[field.variable_name] = field.value;
         });
         this.setState({ page });
       });
