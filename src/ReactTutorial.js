@@ -21,6 +21,7 @@ class ReactTutorial extends Component {
           }
         });
         this.setState({ page });
+        window.loadPrism();
       });
   }
   render() {
