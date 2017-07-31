@@ -25,8 +25,8 @@ class Elements extends Component {
 
   render() {
     return (
-    	<div>
-      		<h2 className='has-text-centered'>This is a demo rendering all the items of the Elements collection with Angular</h2>
+    	<div className="container elements-container">
+      		<h2 className='has-text-centered elements-header'>This is a demo rendering all the items of the Elements collection with React</h2>
       		{
       			(this.state.elements) ? (
       				this.state.elements.map((element, index) => {

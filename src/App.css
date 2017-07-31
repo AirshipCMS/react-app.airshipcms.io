@@ -124,6 +124,10 @@ nav {
 
 /*ELEMENTS*/
 
+h2.elements-header {
+  font-size: 1em;
+}
+
 .image {
   background-color: #6BCFFF;
   padding: 50px;
@@ -187,6 +191,10 @@ nav {
     top: 0;
     right: 0;
   }
+}
+
+.nav-item.github:hover {
+  border-bottom-color: transparent !important;
 }
 
 code{
