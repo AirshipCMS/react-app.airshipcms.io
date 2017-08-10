@@ -5,14 +5,16 @@ class Setup extends Component {
     super(props);
 
     this.state = {
-      page: null
+      page: {
+        body: "",
+        description: "",
+        name: ""
+      }
     };
   }
   componentDidMount() {
     fetch("/api/pages/__root__").then(res => res.json()).then(page => {
-      page.fields.map(field => {
-        return (page[field.variable_name] = field.value);
-      });
+      page.fields.map(field => (page[field.variable_name] = field.value));
       this.setState({ page });
     });
   }
@@ -22,16 +24,16 @@ class Setup extends Component {
         <div className="summary">
           <img src="/assets/media/react-airship.svg" />
           <h1 className="title is-4">
-            {this.state.page !== null ? this.state.page.name : ""}
+            {this.state.page.name}
           </h1>
           <p>
-            {this.state.page !== null ? this.state.page.description : ""}
+            {this.state.page.description}
           </p>
         </div>
         <div
           className="body"
           dangerouslySetInnerHTML={{
-            __html: this.state.page !== null ? this.state.page.body : ""
+            __html: this.state.page.body
           }}
         />
       </div>

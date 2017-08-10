@@ -5,17 +5,15 @@ class ReactTutorial extends Component {
     super(props);
 
     this.state = {
-      page: null
+      page: {
+        body: ''
+      }
     };
   }
   componentDidMount() {
     fetch("/api/pages/react-tutorial").then(res => res.json()).then(page => {
       page.fields.map(field => {
-        switch (field.variable_name) {
-          default:
-            page[field.variable_name] = field.value;
-            break;
-        }
+        page[field.variable_name] = field.value;
       });
       this.setState({ page });
       window.loadPrism();
@@ -26,7 +24,7 @@ class ReactTutorial extends Component {
       <div
         className="ReactTutorial body"
         dangerouslySetInnerHTML={{
-          __html: this.state.page !== null ? this.state.page.body : ""
+          __html: this.state.page.body
         }}
       />
     );

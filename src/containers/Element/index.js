@@ -5,7 +5,11 @@ class Element extends Component {
     super(props);
 
     this.state = {
-      element: null
+      element: {
+        sorting_position: 0,
+        name: "",
+        image: []
+      }
     };
   }
 
@@ -13,10 +17,9 @@ class Element extends Component {
     fetch("/api/aerostats/" + this.props.match.params.id)
       .then(res => res.json())
       .then(element => {
-        element.fields.map(field => {
-          return (element[field.variable_name] = field.value);
-        });
-        this.setState({ element });
+        return element.fields.map(
+          field => (element[field.variable_name] = field.value)
+        ), this.setState({ element });
       });
   }
 
@@ -26,22 +29,20 @@ class Element extends Component {
         <div className="coulmn is-one-quarter">
           <figure className="image element-detail-image">
             <img
-              src={this.state.element ? this.state.element.image[0].url : ""}
-              alt={
-                this.state.element ? this.state.element.image[0].file_name : ""
-              }
+              src={this.state.element.image[0].url}
+              alt={this.state.element.image[0].file_name}
             />
           </figure>
         </div>
         <div className="element-details content column auto">
           <h1>
-            {this.state.element ? this.state.element.name : ""}
+            {this.state.element.name}
           </h1>
           <h4>
-            #{this.state.element ? this.state.element.sorting_position + 1 : ""}
+            #{this.state.element.sorting_position}
           </h4>
           <p>
-            {this.state.element ? this.state.element.description : ""}
+            {this.state.element.description}
           </p>
         </div>
       </div>

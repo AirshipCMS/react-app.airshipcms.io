@@ -5,18 +5,14 @@ class Styling extends Component {
     super(props);
 
     this.state = {
-      page: null
+      page: {
+        body: ""
+      }
     };
   }
   componentDidMount() {
     fetch("/api/pages/styling").then(res => res.json()).then(page => {
-      page.fields.map(field => {
-        switch (field.variable_name) {
-          default:
-            page[field.variable_name] = field.value;
-            break;
-        }
-      });
+      page.fields.map(field => (page[field.variable_name] = field.value));
       this.setState({ page });
       window.loadPrism();
     });
@@ -26,7 +22,7 @@ class Styling extends Component {
       <div
         className="Styling body"
         dangerouslySetInnerHTML={{
-          __html: this.state.page !== null ? this.state.page.body : ""
+          __html: this.state.page.body
         }}
       />
     );
