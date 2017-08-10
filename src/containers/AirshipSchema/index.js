@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import logo from "./assets/airship-react.svg";
-import "./App.css";
 
 class AirshipSchema extends Component {
   constructor(props) {

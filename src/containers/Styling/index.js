@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import "./App.css";
 
-class ReactTutorial extends Component {
+class Styling extends Component {
   constructor(props) {
     super(props);
 
@@ -10,7 +9,7 @@ class ReactTutorial extends Component {
     };
   }
   componentDidMount() {
-    fetch("/api/pages/react-tutorial").then(res => res.json()).then(page => {
+    fetch("/api/pages/styling").then(res => res.json()).then(page => {
       page.fields.map(field => {
         switch (field.variable_name) {
           default:
@@ -25,7 +24,7 @@ class ReactTutorial extends Component {
   render() {
     return (
       <div
-        className="ReactTutorial body"
+        className="Styling body"
         dangerouslySetInnerHTML={{
           __html: this.state.page !== null ? this.state.page.body : ""
         }}
@@ -34,4 +33,4 @@ class ReactTutorial extends Component {
   }
 }
 
-export default ReactTutorial;
+export default Styling;

@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import logo from "./assets/airship-react.svg";
-import "./App.css";
 
-class Styling extends Component {
+class ReactTutorial extends Component {
   constructor(props) {
     super(props);
 
@@ -11,7 +9,7 @@ class Styling extends Component {
     };
   }
   componentDidMount() {
-    fetch("/api/pages/styling").then(res => res.json()).then(page => {
+    fetch("/api/pages/react-tutorial").then(res => res.json()).then(page => {
       page.fields.map(field => {
         switch (field.variable_name) {
           default:
@@ -26,7 +24,7 @@ class Styling extends Component {
   render() {
     return (
       <div
-        className="Styling body"
+        className="ReactTutorial body"
         dangerouslySetInnerHTML={{
           __html: this.state.page !== null ? this.state.page.body : ""
         }}
@@ -35,4 +33,4 @@ class Styling extends Component {
   }
 }
 
-export default Styling;
+export default ReactTutorial;

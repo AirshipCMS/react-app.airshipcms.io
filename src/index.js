@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
-import Setup from "./Setup";
-import Styling from "./Styling";
-import AirshipSchema from "./AirshipSchema";
-import ReactTutorial from "./ReactTutorial";
-import Elements from "./Elements";
-import Element from "./Element";
+import App from "./containers/App";
+import Setup from "./containers/Setup";
+import Styling from "./containers/Styling";
+import AirshipSchema from "./containers/AirshipSchema";
+import ReactTutorial from "./containers/ReactTutorial";
+import Elements from "./containers/Elements";
+import Element from "./containers/Element";
 import "./index.css";
 import { BrowserRouter, Route } from "react-router-dom";
 
