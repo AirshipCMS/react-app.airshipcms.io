@@ -83,102 +83,10 @@ nav {
   color: #68CAF9;
 }
 
-/*SETUP*/
-.container {
-  max-width: 960px;
-  letter-spacing: 0;
-  line-height: 20px;
-  padding: 20px;
-}
-
-.container p {
-  margin-top: 30px;
-}
-
-.summary {
-  text-align: center;
-  background: #6BCFFF;
-  color: #225876;
-  max-width: 960px;
-  border-radius: 5px;
-
-  /*desktop*/
-  padding: 20px;
-  font-size: 14px;
-  margin-bottom: 30px;
-}
-
-#airship-logo g,
-#airship-logo path {
-  fill: #FF8BA9;
-}
-
-.summary .title {
-  color: #225876;
-  margin: 20px;
-}
-
-.summary p {
-  line-height: 1.25;
-}
-
-/*ELEMENTS*/
-
-h2.elements-header {
-  font-size: 1em;
-}
-
-.image {
-  background-color: #6BCFFF;
-  padding: 50px;
-}
-
-.card p {
-  margin: 0;
-}
-
-/*ELEMENT*/
-
-.element-details,
-.element-detail-image {
-  display: inline-block;
-  vertical-align: top;
-}
-
-.element {
-  text-align: center;
-}
-
-.element-detail-image {
-  width: 100%;
-}
-
-.element-details {
-  padding: 20px;
-  color: #8A9A9E;
-}
-
-.element-details h4,
-.element-details h1 {
-  color: #8A9A9E;
-}
-
 @media only screen  and (min-width : 769px) {
-  .summary {
-    padding: 100px;
-    font-size: 20px;
-  }
 
   nav {
     border: none;
-  }
-
-  .element {
-    text-align: left;
-  }
-
-  .element-detail-image {
-    width: auto;
   }
 
   .nav-right {

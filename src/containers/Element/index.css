@@ -1,0 +1,30 @@
+.element-details,
+.element-detail-image {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.element {
+  text-align: center;
+}
+
+.element-detail-image {
+  width: 100%;
+}
+
+.element-details {
+  padding: 20px;
+  color: #8A9A9E;
+}
+
+.element-details h4,
+.element-details h1 {
+  color: #8A9A9E;
+}
+
+@media only screen  and (min-width : 769px) {
+
+  .element-detail-image {
+    width: auto;
+  }
+}
