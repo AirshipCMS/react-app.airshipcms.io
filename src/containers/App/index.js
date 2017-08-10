@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import Nav from "../../components/Nav";
 import "./index.css";
 
 class App extends Component {
@@ -14,41 +14,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <nav className="nav">
-          <div className="container">
-            <Link className="nav-title title is-tab" to="/">
-              React + Airship CMS
-            </Link>
-            <div className="nav-right nav-menu" id="nav-menu">
-              <Link className="nav-item" to="/">
-                Setup
-              </Link>
-              <Link className="nav-item" to="/styling">
-                Styling
-              </Link>
-              <Link className="nav-item active" to="/airship-schema">
-                Airship Schema
-              </Link>
-              <Link className="nav-item" to="/react-tutorial">
-                React Tutorial
-              </Link>
-              <Link className="nav-item" to="/elements">
-                Elements
-              </Link>
-            </div>
-            <a
-              className="nav-item is-tab github"
-              href="https://github.com/AirshipCMS/react-app.airshipcms.io"
-            >
-              <img src="/assets/media/github-icon.svg" />
-            </a>
-            <span className="nav-toggle" id="nav-toggle">
-              <span />
-              <span />
-              <span />
-            </span>
-          </div>
-        </nav>
+        <Nav />
         <div className="container content">
           {this.props.children}
         </div>
