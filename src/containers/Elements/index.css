@@ -1,3 +1,7 @@
+.columns {
+  flex-flow: row wrap;
+}
+
 h2.elements-header {
   font-size: 1em;
 }
