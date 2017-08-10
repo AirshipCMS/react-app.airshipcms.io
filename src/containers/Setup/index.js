@@ -23,7 +23,7 @@ class Setup extends Component {
     return (
       <div className="Setup">
         <div className="summary">
-          <img src="/assets/media/react-airship.svg" />
+          <img src="/assets/media/react-airship.svg" alt="logo"/>
           <h1 className="title is-4">
             {this.state.page.name}
           </h1>

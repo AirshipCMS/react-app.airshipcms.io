@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 export default function Github(props) {
   return (
@@ -6,7 +6,7 @@ export default function Github(props) {
       className="nav-item is-tab github"
       href="https://github.com/AirshipCMS/react-app.airshipcms.io"
     >
-      <img src="/assets/media/github-icon.svg" />
+      <img src="/assets/media/github-icon.svg" alt="github"/>
     </a>
   );
 }

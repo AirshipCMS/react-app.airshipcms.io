@@ -12,9 +12,9 @@ class ReactTutorial extends Component {
   }
   componentDidMount() {
     fetch("/api/pages/react-tutorial").then(res => res.json()).then(page => {
-      page.fields.map(field => {
-        page[field.variable_name] = field.value;
-      });
+      page.fields.map(field =>
+        page[field.variable_name] = field.value
+      );
       this.setState({ page });
       window.loadPrism();
     });

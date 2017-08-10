@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './index.css';
+import "./index.css";
 
 class Element extends Component {
   constructor(props) {
@@ -17,11 +17,12 @@ class Element extends Component {
   componentDidMount() {
     fetch("/api/aerostats/" + this.props.match.params.id)
       .then(res => res.json())
-      .then(element => {
-        return element.fields.map(
-          field => (element[field.variable_name] = field.value)
-        ), this.setState({ element });
-      });
+      .then(element =>
+        element.fields.map(
+          field => (element[field.variable_name] = field.value),
+          this.setState({ element })
+        )
+      );
   }
 
   render() {
