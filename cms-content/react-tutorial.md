@@ -5,7 +5,7 @@
 This app was bootstrapped with `create-react-app`.
 If you don't have this installed globally, run:
 ```
-npm i -g create-react-app`
+npm i -g create-react-app
 ```
 
 Once installed, run the following:
