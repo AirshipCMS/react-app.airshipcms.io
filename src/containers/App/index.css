@@ -238,3 +238,11 @@ pre[class*="language-"] {
 .token.entity {
   cursor: help;
 }
+
+.number {
+  background-color: transparent;
+  padding: 0;
+  height: auto;
+  min-width: 0;
+  margin-right: 0;
+}

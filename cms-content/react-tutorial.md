@@ -46,17 +46,13 @@ For the `__root__` page in this repo, the full GET request URL is:
 https://yourdomain.airshipcms.io/api/pages/__root__
 ```
 
-`/src/Setup.js`:
+`/src/Setup`:
 ```
 componentDidMount() {
-  fetch("/api/pages/__root__")
-    .then( res => res.json() )
-    .then( page => {
-      page.fields.map((field) =>{
-        return element[field.variable_name] = field.value;
-      });
-      this.setState({ page });
-    });
+  fetch("/api/pages/__root__").then(res => res.json()).then(page => {
+    page.fields.map(field => (page[field.variable_name] = field.value));
+    this.setState({ page });
+  });
 }
 ```
 
@@ -79,23 +75,28 @@ The `value` property is what you will bind to your templates.
 
 Because the "Body" field's type contains HTML, to bind this field, you have to use React's `dangerouslySetInnerHTML`.
 
-`/src/Setup.js`: 
+`/src/Setup`: 
 ```
-  render() {
-    const currentPath = window.location.pathname;
-    return (
-      (currentPath === '/') ?  (
-        <div className="Setup">
-          <div className="summary">
-            <img src="/assets/media/react-airship.svg"/>
-            <h1 className="title is-4">{ (this.state.page !== null) ? this.state.page.name : "" }</h1>
-            <p>{ (this.state.page !== null) ? this.state.page.description : "" }</p>
-          </div>
-          <div className="body" dangerouslySetInnerHTML={{__html: this.state.page !== null ? this.state.page.body : "" }}></div>
-        </div>
-      ) : null
-    );
-  }
+render() {
+  return (
+    <div className="Setup">
+      <div className="summary">
+        <img src="/assets/media/react-airship.svg" alt="logo"/>
+        <h1 className="title is-4">
+          {this.state.page.name}
+        </h1>
+        <p>
+          {this.state.page.description}
+        </p>
+      </div>
+      <div
+        className="body"
+        dangerouslySetInnerHTML={{
+          __html: this.state.page.body
+        }}
+      />
+    </div>
+  );
 }
 
 ```
@@ -131,18 +132,18 @@ class Elements extends Component {
     super(props);
 
     this.state = {
-      elements : null
+      elements: []
     };
   }
   componentDidMount() {
     fetch("/api/aerostat_collection/elements")
-      .then( res => res.json() )
-      .then( elements => {
-        elements.map((element) => {
-          return element.fields.map((field) =>{
-            return element[field.variable_name] = field.value;
-          });
-        });
+      .then(res => res.json())
+      .then(elements => {
+        elements.map(element =>
+          element.fields.map(
+            field => (element[field.variable_name] = field.value)
+          )
+        );
         this.setState({ elements });
       });
   }
@@ -154,37 +155,37 @@ In the render function, map over `this.state.elements` to display each element's
 ```
 render() {
   return (
-    <div>
-        <h2 className='has-text-centered'>This is a demo rendering all the items of the Elements collection with Angular</h2>
-        {
-          (this.state.elements) ? (
-            this.state.elements.map((element, index) => {
-              if(index % 4 === 0) {
-                return <div className="columns" key={ index }>
-                {
-                  [index, index + 1, index + 2, index + 3].map((el, i) => {
-                    return <Link to={ "/element/" + this.state.elements[el].id.toString() } className="column is-3 element" key={ i }>
-                      <div className="card">
-                        <div className="card-image">
-                          <figure className="image">
-                            <img src={ this.state.elements[el].image[0].thumbnail_url } alt={ this.state.elements[el].image[0].file_name/>
-                          </figure>
-                        </div>
-                        <div className="card-content">
-                          <div className="media-content">
-                            <p className="title is-4">{ this.state.elements[el].name }</p>
-                          </div>
-                        </div>
-                      </div>
-                    </Link>
-                  })
-                }
+    <div className="container elements-container">
+      <h2 className="has-text-centered elements-header">
+        This is a demo rendering all the items of the Elements collection with
+        React
+      </h2>
+      <div className="columns">
+        {this.state.elements.map(element =>
+          <div className="column is-3 element" key={element.id}>
+            <Link to={"/element/" + element.id.toString()}>
+              <div className="card">
+                <div className="card-image">
+                  <figure className="image">
+                    <img
+                      src={element.image[0].thumbnail_url}
+                      alt={element.image[0].file_name}
+                    />
+                  </figure>
                 </div>
-              }
-            })
-          ) : null
-        }
+                <div className="card-content">
+                  <div className="media-content">
+                    <p className="title is-4">
+                      {element.name}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </div>
+        )}
       </div>
+    </div>
   );
 }
 ```
