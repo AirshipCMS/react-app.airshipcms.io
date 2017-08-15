@@ -9,7 +9,7 @@ class Element extends Component {
       element: {
         sorting_position: 0,
         name: "",
-        image: []
+        image: {}
       }
     };
   }
@@ -17,12 +17,12 @@ class Element extends Component {
   componentDidMount() {
     fetch("/api/aerostats/" + this.props.match.params.id)
       .then(res => res.json())
-      .then(element =>
-        element.fields.map(
-          field => (element[field.variable_name] = field.value),
-          this.setState({ element })
-        )
-      );
+      .then(element => {
+        element.fields.map(field => {
+          return element[field.variable_name] = field.value[0];
+        });
+        this.setState({ element });
+      });
   }
 
   render() {
@@ -31,8 +31,8 @@ class Element extends Component {
         <div className="coulmn is-one-quarter">
           <figure className="image element-detail-image">
             <img
-              src={this.state.element.image[0].url}
-              alt={this.state.element.image[0].file_name}
+              src={this.state.element.image.url}
+              alt={this.state.element.image.file_name}
             />
           </figure>
         </div>
