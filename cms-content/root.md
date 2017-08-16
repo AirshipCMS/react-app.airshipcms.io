@@ -53,6 +53,7 @@ Open a web browser and naviagte to `localhost:3000`
 
 # Project Structure
 
+```
 .
 ├── assets
 │   └── react-airship-blue.svg
@@ -119,6 +120,10 @@ Open a web browser and naviagte to `localhost:3000`
 │   ├── index.css
 │   └── index.js
 └── yarn.lock
+```
+
+# .airship
+The `.airship`  directory contains a file called `name`. The `name` file identifies the subdomain of your project whenever you run `airship serve`, `airship launch`, or `airship land`.
 
 # compartments
 
