@@ -13,7 +13,7 @@ Click the <img width="26" alt="wrench" src="https://user-images.githubuserconten
 
 Check that the layout for the page is set to `application.html` and the template for the page is set to `root.html`.
 
-<img width="683" alt="homepage-page-rendering" src="https://user-images.githubusercontent.com/1865400/28551396-738c3188-7083-11e7-98a4-5d05b7b0b516.png">
+<img width="683" alt="Page Rendering" src="https://airshipcms.io/assets/media/oss-elements/page-rendering.jpg">
 
 Modify the Page Fields:
 - Remove the initial page fields from the `Page Fields` section.
@@ -21,7 +21,7 @@ Modify the Page Fields:
 - Add a link field titled "Github". 
 - Add a textarea field titled "Body". 
 
-<img width="730" alt="homepage-fields" src="https://user-images.githubusercontent.com/1865400/28551419-9acdbd52-7083-11e7-8d57-044e65404628.png">  
+<img width="757" alt="Collection Rendering Set Layout" src="https://airshipcms.io/assets/media/oss-elements/page-fields-classically-rendered.jpg">
 
 Click the Modify Page button.
 
@@ -30,7 +30,7 @@ Click the Modify Page button.
 - Enter "Airship Schema" into the Title field.
 - The permalink "airship-schema" will generate.
 
-<img width="683" alt="airship-schema" src="https://user-images.githubusercontent.com/1865400/28551616-d3c1d764-7084-11e7-87b2-652de63df8e5.png">  
+<img width="683" alt="Airship Schema Permalink" src="https://airshipcms.io/assets/media/oss-elements/page-setup.jpg"> 
 
 You don't need to set anything in the `Template Rendering` section, since the contents of the project are all rendered in the single-page application on the root page.
 
@@ -52,11 +52,11 @@ Repeat for the "Styling" page. Be sure to set the page template to `styling.html
 - Refer to a single item in this collection as a(n)... "element".
 - The public path "elements" will generate.
 
-<img width="653" alt="Collection Setup" src="https://airshipcms.io/assets/media/oss-elements/collection-setup.jpg">
+<img width="653" alt="Collection Setup" src="https://airshipcms.io/assets/media/oss-elements/collection-setup.png">
 
 In the `Collection Rendering` section, you'll see `Layout`, `Template Directory`, `Items Per Page`, `Sort Property`, and `Sort Order`.
 
-<img width="727" alt="Initial Collection Rendering" src="https://airshipcms.io/assets/media/oss-elements/collection-rendering-no-layout-or-templates.jpg">
+<img width="727" alt="Initial Collection Rendering" src="https://airshipcms.io/assets/media/oss-elements/collection-rendering-no-layout-or-templates.png">
 
 Since this project uses classic rendering, you will need to set a layout and template directory. Select `application.html` from the `Layout` dropdown then click `Set Layout`.
 
@@ -80,7 +80,7 @@ Select `Create New Directory` from the `Template Directory` dropdown, and set th
 
 In the `Collection Settings` section, make sure "Show Permalink" is checked.
 
-<img width="720" alt="Collection Settings" src="https://airshipcms.io/assets/media/oss-elements/collection-settings.jpg">
+<img width="720" alt="Collection Settings" src="https://airshipcms.io/assets/media/oss-elements/collection-settings.png">
 
 In the `Post Fields` section, add a text field titled "Name", an image field titled "Image", and a textarea field titled "Description".
 
