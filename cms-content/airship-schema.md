@@ -32,9 +32,7 @@ Click the Modify Page button.
 
 <img width="683" alt="airship-schema" src="https://user-images.githubusercontent.com/1865400/28551616-d3c1d764-7084-11e7-87b2-652de63df8e5.png">  
 
-In the Page Rendering section, set the layout to `application.html` and set template to `airship-schema.html`
-
-<img width="686" alt="Body Field" src="https://airshipcms.io/assets/media/oss-elements/page-rendering-airship-schema.jpg">
+You don't need to set anything in the `Template Rendering` section, since the contents of the project are all rendered in the single-page application on the root page.
 
 In the `Page Fields` section, add a textarea field titled "Body".
 
@@ -46,7 +44,7 @@ Repeat for the "React Tutorial" page. Be sure to set the page template to `airsh
 
 Repeat for the "Styling" page. Be sure to set the page template to `styling.html`.
 
-<img width="920" alt="Pages" src="https://airshipcms.io/assets/media/oss-elements/pages-all-react.jpg"> 
+<img width="928" alt="Pages" src="https://airshipcms.io/assets/media/oss-elements/pages-all-react.jpg"> 
 
 ## Create the `Elements` Collection
 - Navigate to `Collections` and click the `New Collection` button.
