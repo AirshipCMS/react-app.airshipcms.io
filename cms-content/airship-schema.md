@@ -44,7 +44,7 @@ Repeat for the "React Tutorial" page. Be sure to set the page template to `airsh
 
 Repeat for the "Styling" page. Be sure to set the page template to `styling.html`.
 
-<img width="928" alt="Pages" src="https://airshipcms.io/assets/media/oss-elements/pages-all-react.jpg"> 
+<img width="928" alt="Pages" src="https://airshipcms.io/assets/media/oss-elements/pages-all-react.png"> 
 
 ## Create the `Elements` Collection
 - Navigate to `Collections` and click the `New Collection` button.
