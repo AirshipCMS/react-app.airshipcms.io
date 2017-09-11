@@ -106,7 +106,7 @@ Return to the Setup Instructions Step #3 for instructions on developing locally,
 ---
 
 # Site Settings
-You will need to set up a SPA Route so that your Angular Application can load on the _root_ page.
+You will need to set up a SPA Route so that your React Application can load on the _root_ page.
 
 In the Airship admin panel, click the `Settings` located in the sidebar.
 <img src="https://cdn.rawgit.com/AirshipCMS/angular-1.airshipcms.io/e4bf7769/assets/settings-link.png">
