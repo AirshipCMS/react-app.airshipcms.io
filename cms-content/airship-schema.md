@@ -52,11 +52,11 @@ Repeat for the "Styling" page. Be sure to set the page template to `styling.html
 - Refer to a single item in this collection as a(n)... "element".
 - The public path "elements" will generate.
 
-<img width="653" alt="Collection Setup" src="https://airshipcms.io/assets/media/oss-elements/collection-setup.png">
+<img width="653" alt="Collection Setup" src="https://airshipcms.io/assets/media/oss-elements/collection-setup.jpg">
 
 In the `Collection Rendering` section, you'll see `Layout`, `Template Directory`, `Items Per Page`, `Sort Property`, and `Sort Order`.
 
-<img width="727" alt="Initial Collection Rendering" src="https://airshipcms.io/assets/media/oss-elements/collection-rendering-no-layout-or-templates.png">
+<img width="727" alt="Initial Collection Rendering" src="https://airshipcms.io/assets/media/oss-elements/collection-rendering-no-layout-or-templates.jpg">
 
 Since this project uses classic rendering, you will need to set a layout and template directory. Select `application.html` from the `Layout` dropdown then click `Set Layout`.
 
@@ -80,7 +80,7 @@ Select `Create New Directory` from the `Template Directory` dropdown, and set th
 
 In the `Collection Settings` section, make sure "Show Permalink" is checked.
 
-<img width="720" alt="Collection Settings" src="https://airshipcms.io/assets/media/oss-elements/collection-settings.png">
+<img width="720" alt="Collection Settings" src="https://airshipcms.io/assets/media/oss-elements/collection-settings.jpg">
 
 In the `Post Fields` section, add a text field titled "Name", an image field titled "Image", and a textarea field titled "Description".
 
